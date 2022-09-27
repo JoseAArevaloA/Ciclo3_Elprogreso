@@ -1,0 +1,36 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block content %}
+    <div style="display: flex; justify-content: center; margin: 50px;">
+            <div class="card text-center border-warning" style="width: 25%; margin:20px;" >
+                <h5 class="card-header bg-warning"><b>Formulario de Registro</b></h5>
+                <form method="POST">
+                    {% csrf_token %}
+                     <div class="card-body">
+                         <p class="card-text"><b>Nombres </b></p>
+                         <p class ="card-text">{{form.first_name}}</p>
+                         <p class="card-text"><b>Apellidos </b></p>
+                         <p class ="card-text">{{form.last_name}}</p>
+                         <p class="card-text"><b>Usuario </b></p>
+                         <p class ="card-text">{{form.username}}</p>
+                         <p class="card-text"><b>Email </b></p>
+                         <p class ="card-text">{{form.email}}</p>
+                         <p class="card-text"><b>Contraseña </b></p>
+                         <p class ="card-text">{{form.password1}}</p>
+                         <p class="card-text"><b>Repetir Contraseña </b></p>
+                         <p class ="card-text">{{form.password2}}</p>
+                     </div>
+
+
+                    <div style="margin-top:15px;">
+                    <button type="submit" class="btn btn-warning " style="margin:20px;" >Registrarse</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+
+
+
+
+{% endblock %}

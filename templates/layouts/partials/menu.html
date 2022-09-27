@@ -1,0 +1,27 @@
+
+<nav>
+    {% load static %}
+    <img src="{% static 'img/logo.png' %}" width="135" />
+    {% comment %}"href="https://www.flaticon.com/free-icons/sprout" title="sprout icons">Sprout icons created by Freepik - Flaticon"
+        la anterior ruta es del creador del logo
+    {% endcomment %}
+    <h1>EL PROGRESO</h1>
+
+    <ul>
+        <li><a href=" {% url 'index'%}"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+  <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+</svg>Inicio</a></li>
+        <li><a href=" {% url 'productos'%}">Productos</a></li>
+        <li><a href=" {% url 'contactenos'%}">Contáctenos</a></li>
+        {% if user.is_authenticated %}
+            <li><a> Hola, {{user.username}}</a></li>
+            <li><a href=" {% url 'logout'%}">Cerrar Sesión</a></li>
+            {% else %}
+            <li><a href=" {% url 'registro'%}">Registro</a></li>
+            <li><a href=" {% url 'login'%}">Iniciar Sesión</a></li>
+        {% endif %}
+
+
+
+    </ul>
+</nav>

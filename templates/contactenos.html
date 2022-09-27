@@ -1,0 +1,26 @@
+{% extends 'layouts/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div style="display: flex; justify-content: center; margin: 50px;">
+        <form method="POST">
+            {% csrf_token %}
+
+                  <div class="col-lg-12" >
+                    <div class="card text-center border-warning" style="width: 100%; margin:20px;" >
+                        <h5 class="card-header border-warning bg-warning"><b>CONTÁCTENOS</b></h5>
+                        <div class="card-body">
+                            <p class="card-text "><b>{{mensajes.nombre|as_crispy_field}}</b></p>
+                            <p class="card-text"><b>{{mensajes.email|as_crispy_field}}</b></p>
+                            <p class="card-text"><b>{{mensajes.tipo_consulta|as_crispy_field}}</b></p>
+                            <p class="card-text"><b>{{mensajes.mensaje|as_crispy_field}}</b></p>
+                            <p class="card-text"><button type="submit" class="btn btn-warning" >Enviar</button></p>
+                        </div>
+                    </div>
+                  </div>
+
+
+        </form>
+
+    </div>
+{% endblock %}
