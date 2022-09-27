@@ -13,12 +13,6 @@ class Producto(models.Model):
     def __str__(self):
         return self.nombre
 
-class Orden(models.Model):
-    producto_id = models.ForeignKey(Producto, on_delete=models.CASCADE)
-    fecha = models.DateField(default=date.today)
-
-    def __str__(self):
-        return self.fecha
 
 opciones_consultas=[
     [0,'Consulta'],
