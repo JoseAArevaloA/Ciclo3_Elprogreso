@@ -3,7 +3,7 @@ import os.path
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -45,7 +45,7 @@ ROOT_URLCONF = 'Ciclo3.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'Ciclo3/templates')],
+        'DIRS': [r'C:\Users\Usuario\PycharmProjects\Ciclo3\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
