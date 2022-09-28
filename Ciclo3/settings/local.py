@@ -17,3 +17,6 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+STATICFILES_DIRS = [
+    BASE_DIR / r"C:\Users\Usuario\PycharmProjects\Ciclo3\static",
+]
