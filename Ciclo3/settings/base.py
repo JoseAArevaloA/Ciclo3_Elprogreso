@@ -12,10 +12,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-cwjxraz4#5t+jsdj9o@b5k9g04r-d1*7xsx2r9&oqi+r8^v*ca'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -64,22 +60,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Ciclo3.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'El_progreso',
-        'USER': 'usuario_administrador',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

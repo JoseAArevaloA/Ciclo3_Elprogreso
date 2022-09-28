@@ -1,0 +1,1 @@
+web: gunicorn Ciclo3.wsgi
